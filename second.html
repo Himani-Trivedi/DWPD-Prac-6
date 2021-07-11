@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registartion Form [Stage - 2]</title>
+</head>
+<style>
+    input {
+        width: 170px;
+    }
+
+    
+</style>
+
+<body>
+    <div class="progress">
+        <div class="box">
+            <h2>1</h2>
+        </div>
+
+        <progress max="100" id="p1" value="60"></progress>
+
+        <div class="box">
+            <h2>2</h2>
+        </div>
+
+        <progress max="100" id="p2" value="0"></progress>
+
+        <div class="box">
+            <h2>3</h2>
+        </div>
+
+    </div>
+    <div class="container" id="sec">
+        <form action="third.html" method="GET">
+            <h1>Qualification</h1>
+            <h2 style="color: rgba(0, 0, 0, 0.24);">This is step 2</h2>
+            <input type="text" name="fname" id="name" placeholder="Himani" required>
+            <input type="text" name="lname" id="surname" placeholder="Trivedi"
+                style="float: right; position: relative; top: -75px; left:-20px ;" required>
+
+            <input type="text" name="clg" placeholder="Collage Name" style="width: 300px;" required>
+
+            <input list="degree" name="degree" style="width: 240px;" placeholder="Select Degree" required>
+            <datalist id="degree">
+                <option value="ANM" selected>Auxiliary Nurse Midwife</option>
+                <option value="GNM">General Nursing and Midwifery</option>
+                <option value="BSc">BSc Nursing</option>
+            </datalist>
+   
+            <label for="cert">RN Certificate</label>
+            <input type="file" name="certificate" id="cert" required accept=".pdf" />
+
+            <label for="cert">Work Experience</label><br>
+            <textarea name="expe" id="exp" placeholder="Tell us about your Work experience" required></textarea>
+
+            <input type="submit" id="submit2">
+            <input type="reset">
+        </form>
+    </div>
+
+</body>
+<script>
+
+</script>
+
+</html>

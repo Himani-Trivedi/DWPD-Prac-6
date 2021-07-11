@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registartion Form [Stage - 3]</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    button {
+        display: inline-block;
+        background-color: rgba(6, 213, 250, 0.514);
+        width: auto;
+        padding: 5px;
+        font-size: 17px;
+        height: auto;
+        cursor: pointer;
+        outline: 0;
+        border: 0ch;
+        margin: 5px;
+    }
+
+    button:hover {
+        border: 2px solid rgba(6, 213, 250, 0.788);
+        background-color: rgba(6, 213, 250, 0.116);
+
+    }
+
+    input[type=text] {
+        width: 200px;
+    }
+
+    input[type=number] {
+        width: 100px;
+    }
+
+    .ser {
+        display: flex;
+    }
+</style>
+
+<body>
+    <div class="progress">
+        <div class="box">
+            <h2>1</h2>
+        </div>
+
+        <progress max="100" id="p1" value="100"></progress>
+
+        <div class="box">
+            <h2>2</h2>
+        </div>
+
+        <progress max="100" id="p2" value="50"></progress>
+
+        <div class="box">
+            <h2>3</h2>
+        </div>
+
+    </div>
+
+    <div class="container" id="third">
+        <form action="done.html" method="GET">
+            <h1>Service related data</h1>
+            <h2 style="color: rgba(0, 0, 0, 0.24);">This is step 3</h2>
+            <input type="tel" name="no" id="mo" placeholder="9999999999" required>
+
+            <label for="area" style="left: 30px;">Select Areas to give Services</label><br>
+            <button type="button" onclick="arealist(this.id)" id="a1">New Maninagar</button>
+            <button type="button" onclick="arealist(this.id)" id="a2">Ghodasar</button>
+            <button type="button" onclick="arealist(this.id)" id="a3">Maninagar</button>
+            <button type="button" onclick="arealist(this.id)" id="a4">CTM</button>
+            <button type="button" onclick="arealist(this.id)" id="a5">Chandranagar</button>
+            <button type="button" onclick="arealist(this.id)" id="a6">Naroda</button>
+            <button type="button" onclick="arealist(this.id)" id="a7">Paldi</button>
+            <button type="button" onclick="arealist(this.id)" id="a8">Nehrunagar</button>
+            <textarea name="alist" id="alist" readonly></textarea>
+
+            <div class="ser">
+                <input type="text" name="Injection" id="" value="Injection" readonly>
+                <input type="number" name="" id="" value="0" max="1000" min="0">
+            </div>
+            <div class="ser"> <input type="text" name="Wound Care" id="" value="Wound Care" readonly>
+                <input type="number" name="" id="" value="0" max="1000" min="0">
+            </div>
+
+
+            <input type="submit" id="submit3" value="Done">
+
+
+        </form>
+    </div>
+</body>
+<script>
+    function arealist(id) {
+        // console.log(document.getElementById('alist').value);
+        document.getElementById('alist').value += document.getElementById(id).innerText + ',';
+        document.getElementById(id).disabled = true;
+    }
+</script>
+
+</html>
